@@ -1,3 +1,6 @@
 h2 {
     color: blue;
 }
+span.badge.badge-primary {
+    color: blue;
+}
