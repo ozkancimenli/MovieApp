@@ -5,8 +5,8 @@
   <div class="card-body">
     <button (click)="loggingService.clear()" class="btn btn-primary btn-sm">Clear</button>
     <hr>
-    <p *ngFor="let messages of loggingService.messages">
-      {{messages}}
+    <p *ngFor="let message of loggingService.messages">
+      {{message}}
     </p>
   </div>
 </div>
