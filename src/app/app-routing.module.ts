@@ -5,10 +5,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 const routes: Routes=[
-  {path:'', redirectTo:'/dashboard', pathMatch:'full'},
-  {path:'dashboard', component:DashboardComponent},
-  {path:'movies', component:MoviesComponent},
-  {path:'detail/:id', component:MovieDetailComponent}
+  {path: '', redirectTo:'/dashboard', pathMatch:'full'},
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'movies', component: MoviesComponent},
+  {path: 'detail/:id', component: MovieDetailComponent}
 ];
 
 @NgModule({
