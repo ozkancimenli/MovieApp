@@ -10,7 +10,9 @@ import { LoggingComponent } from './logging/logging.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService ,{ dataEncapsulation : false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
